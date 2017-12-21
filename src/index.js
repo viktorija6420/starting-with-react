@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Hello from './App.js';
+import Hello from './Hello.js';
 
 let person = {
   personName: "John",

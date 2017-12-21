@@ -1,19 +1,32 @@
-// bring in React and Component from React
 import React, { Component } from 'react';
 
-// define our Hello component
 class Hello extends Component {
-// what should the component render?
+  // what should happen when the component is first created
+  constructor (props) {
+    super()
+    //it means you should still do what is default in this class
+
+    //define initial state
+    this.state = {
+      moodPoints: 1
+    }
+
+  }
+    increaseMood(e){
+      this.setState({
+        moodPoints: this.state.moodPoints + 1
+      });
+    }
+
   render() {
     // make sure to return some UI
     return (
       <div>
-        <p>Seems like React cannot handle more than one
-        JSX element per component, so putting more elements
-        in one is a good solution. Cool!</p>
         <h1>Hello {this.props.name}!</h1>
         <h3>You are {this.props.age} years old!</h3>
         <h3>Your favorite animal: {this.props.animals[0] + " "} </h3>
+        <h3>On a scale of 1-10</h3>
+        <h3>Your level of happiness: {this.state.moodPoints}</h3>
       </div>
     );
   }
