@@ -7,16 +7,27 @@ class Hello extends Component {
     //it means you should still do what is default in this class
 
     //define initial state
+
+
     this.state = {
       moodPoints: 1
+
+
     }
 
   }
-    increaseMood(e){
+
+  increaseMood(e){
+    if (this.state.moodPoints >= 10){
+      this.setState({
+        moodPoints: 1
+      })
+    } else {
       this.setState({
         moodPoints: this.state.moodPoints + 1
-      });
+      })
     }
+  }
 
   render() {
     // make sure to return some UI
