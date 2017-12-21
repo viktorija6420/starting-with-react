@@ -27,6 +27,7 @@ class Hello extends Component {
         <h3>Your favorite animal: {this.props.animals[0] + " "} </h3>
         <h3>On a scale of 1-10</h3>
         <h3>Your level of happiness: {this.state.moodPoints}</h3>
+        <button onClick={(e) => this.increaseMood(e)}>Cheer up!</button>
       </div>
     );
   }
